@@ -1,0 +1,55 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.one {
+  width: 350px;
+  height: 250px;
+  background: lightcoral;
+  position: relative;
+  transition: background 3s linear;
+}
+
+.one::before {
+  content: "";
+  width: 364px;
+  height: 264px;
+  background: lightseagreen;
+  position: absolute;
+  top: -156px;
+  left: -158px;
+  z-index: -2;
+  transition: all 2s linear;
+}
+
+.one::after {
+  content: "";
+  width: 380px;
+  height: 280px;
+  background: black;
+  position: absolute;
+  top: -230px;
+  left: -250px;
+  z-index: -3;
+  transition: all 2s linear;
+}
+
+.one:hover::after {
+  top: -13px;
+  left: -15px;
+  background: purple;
+}
+
+.one:hover:before {
+  top: -6px;
+  left: -8px;
+  background: yellow;
+}
+
+.one:hover {
+  background: black;
+}
