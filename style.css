@@ -11,7 +11,18 @@
   height: 250px;
   background: lightcoral;
   position: relative;
-  transition: background 3s linear;
+  transition: all 2s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  transition: opacity 5s ease-in;
 }
 
 .one::before {
@@ -42,14 +53,21 @@
   top: -13px;
   left: -15px;
   background: purple;
+  border-radius: 50%;
 }
 
 .one:hover:before {
   top: -6px;
   left: -8px;
   background: yellow;
+  border-radius: 50%;
 }
 
 .one:hover {
   background: black;
+  border-radius: 50%;
+}
+
+.one:hover h1 {
+  opacity: 1;
 }
